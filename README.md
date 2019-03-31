@@ -1,6 +1,29 @@
 # OCP Java SE 8 Programmer II Essentials
 
 ## Java Class Design
+ - Know traits of singleton classes and immutable classes.
+ - With a method override, access modifier must NOT be more specific.
+ - Singleton pattern requires that only ONE instance of the class exist.  To prevent default no-argument constructor from being available, a singleton class should have a PRIVATE CONSTRUCTOR in each class.
+ - Lazy instantiation (in the Singleton pattern) defers creating the object until the first caller requests it.
+ - with *protected* access modifier: accessible in same package or in subclasses in a different package
+ - with *default* access modifier: package-private
+ - What does the code below print?
+ ```
+ class Laptop extends Computer {
+     String type = "laptop";
+ }
+ 
+ public class Computer {
+     String type = "computer";
+     public static void main(String[] args) {
+         Computer computer = new Laptop();
+         Laptop laptop = new Laptop();
+         System.out.println(computer.type + " ," + laptop.type);
+     }
+ }
+ ```
+ This prints ```computer ,laptop``` .  For instance variables, Java looks at the type of the reference and calls the appropriate variable. 
+
 <br>
 
 ## Advanced Java Class Design
