@@ -51,6 +51,47 @@
 <br>
 
 ## Java SE 8 Date/Time API
+Import java.time.*; 
+- LocalDate – just a date
+- LocalTime – just a time (hours/minutes/seconds/nanos (fractional seconds))
+- LocalDateTime – date and time (Java uses T to separate date and time when converting LocalDateTime to a String)
+- ZonedDateTime – date and time and time zone
+
+now() – static method that gives current date and time (in each of 4 aforementioned classes)
+
+time zone offset:
+- w/minus: add offset to time
+- w/plus: subtract offset from time
+
+Month is an enum (enum is NOT an int and cannot be compared to one)
+
+Can combine dates and times into one object (ex. LocalDateTime.of(date1, time1);)
+
+3 options to create ZonedDateTime
+- all fields passed individually (with time zone object as last field)
+- public static ZonedDateTime of(LocalDate date, LocalTime time, ZoneId zone)
+- public static ZonedDateTime of(LocalDateTime dateTime, ZoneId zone)
+
+No constructors used with date and time classes (cannot construct a date or time object directly).  Date and Time classes have private constructors to force you to use the factory’s static methods.
+Ex. LocalDate d = new LocalDate(); //DOES NOT COMPILE
+
+DateTimeException thrown for invalid values (e.g., January 32nd)
+
+With immutable types, make sure return value of a method is not ignored: Date and Time classes immutable, therefore remember to assign the results of these methods to a reference variable so that they are not lost.
+
+Adding to / subtracting from dates and times: plusDays(), plusMonths(), minusHours(), ….
+
+Java hides seconds and nanoseconds when not using them.
+
+5 ways to create a Period class: ofYears(int y), ofMonths(int m), ofWeeks(int w), of Days(int d), of(int y, int m, int d) -- Cannot chain methods when creating a Period
+
+Review printing of Periods format as Strings
+- Ex. System.out.println(Period.of(0, 20, 47)); //P20M47D
+- Ex. System.out.println(Period.ofWeeks(3)); //P21D
+
+Durations: intended for smaller units of time than Periods; specify days/hours/minutes/seconds/nanos
+
+...
 <br>
 
 ## Java I/O Fundamentals
