@@ -89,9 +89,16 @@ Review printing of Periods format as Strings
 - Ex. System.out.println(Period.of(0, 20, 47)); //P20M47D
 - Ex. System.out.println(Period.ofWeeks(3)); //P21D
 
-Durations: intended for smaller units of time than Periods; specify days/hours/minutes/seconds/nanos
+Durations: intended for smaller units of time than Periods; specify days/hours/minutes/seconds/nanos.  Used with objects that have TIME (String output beginning with PT).  ofDays(int d), ofHours(int h), ..., ofNanos(int n).  Does not have a constructor that takes multiple units like Period class does.
 
-...
+ChronoUnit: (ex. Duration daily = Duration.of(1, ChronoUnit.DAYS);).  Can be used to determine how far apart two Temporal values are. Ex. ChronoUnit.HOURS.between(LocalTime one, LocalTime two). dateTime.plus(duration) OK, time.plus(duration) OK, date.plus(duration) NOT OK.
+
+LocalTime cannot be used with Period.  LocalDate cannot be used with Duration.
+
+Instant: specific moment in time in GMT time zone (converts to a common unit of measure).  Instant displays a year and month while preventing you from doing math with those fields.
+
+Daylight Savings Time: One day in March that is 23 hours long.  One day in November that is 25 hours long.  Note time 'jumps/repeats' and different UTC offsets before and after 2am time 'jump/repeat'.
+
 <br>
 
 ## Java I/O Fundamentals
