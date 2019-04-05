@@ -1,0 +1,57 @@
+SELECT WSH AWAY GAME DATA
+		
+Date: October 22, 2018
+Opponent: Vancouver Canucks
+Local Time Zone: US/Pacific
+Start Time (EST): 7pm
+Start Time (Local): CALCULATE
+Start Time (GMT): CALCULATE
+		
+Date: October 27, 2018
+Opponent: Calgary Flames
+Local Time Zone: US/Mountain
+Start Time (EST): 2pm
+Start Time (Local): CALCULATE
+Start Time (GMT): CALCULATE
+		
+Date: November 14, 2018
+Opponent: Winnipeg Jets
+Local Time Zone: US/Central
+Start Time (EST): 7pm
+Start Time (Local): CALCULATE
+Start Time (GMT): CALCULATE
+		
+Date: December 6, 2018
+Opponent: Arizona Coyotes
+Local Time Zone: US/Mountain
+Start Time (EST): 7pm
+Start Time (Local): CALCULATE
+Start Time (GMT): CALCULATE
+		
+Date: January 20, 2019
+Opponent: Chicago Blackhawks
+Local Time Zone: US/Central
+Start Time (EST): 11:30am
+Start Time (Local): CALCULATE
+Start Time (GMT): CALCULATE
+		
+Date: January 23, 2019
+Opponent: Toronto Maple Leafs
+Local Time Zone: US/Eastern
+Start Time (EST): 7:30pm
+Start Time (Local): CALCULATE
+Start Time (GMT): CALCULATE
+		
+Date: February 18, 2019
+Opponent: Los Angeles Kings
+Local Time Zone: US/Pacific
+Start Time (EST): 7:30pm
+Start Time (Local): CALCULATE
+Start Time (GMT): CALCULATE
+		
+Date: February 23, 2019
+Opponent: Buffalo Sabres
+Local Time Zone: US/Eastern
+Start Time (EST): 1pm
+Start Time (Local): CALCULATE
+Start Time (GMT): CALCULATE 
