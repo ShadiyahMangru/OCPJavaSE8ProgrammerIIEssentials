@@ -102,6 +102,44 @@ Daylight Savings Time: One day in March that is 23 hours long.  One day in Novem
 <br>
 
 ## Java I/O Fundamentals
+- java.io API
+- can design code that writes the current state of an application to a file every time application closed, and reloads data when application executed the next time
+- **file:** record within a file system that stores user and system data
+- **directory:** record within a file system that contains files as well as other directories (often refer to a directory reference as a file record)
+- **root directory:** topmost directory in the file system (from which all files and directories inherit)
+- **file system:** in charge of reading and writing data within a computer
+- **path:** a String representation of a file or directory within a file system
+- **File class (java.io.File):** used to read information about existing files and directories, list the contents of a directory, and create/delete files and directories.
+  - an instance of a File class represents the pathname of a particular file or directory on the file system; can be passed as a reference to many stream classes to read or write data
+- **absolute path:** full path from root directory to the file or directory
+- **relative path:** path from current working directory to file or directory
+- Java offers 2 options to retrieve local separation character within a path statement:
+   - system property: System.getProperty("file.separator")
+   - static variable: java.io.File.separator
+- Commonly-used java.io.File methods: exists(), getName(), getAbsolutePath(), isDirectory(), isFile(), length(), lastModified(), delete(), renameTo(File), mkdir(), mkdirs(), getParent(), listFiles()
+- note: \\ -- backslash must be escaped with another backslash to be used within a String
+
+**Streams**
+
+- **input:** reading the data from a resource
+- **output:** writing the data to a resource
+- the contents of a file may be accessed or written via a stream, which is a list of data elements presented sequentially
+- the stream allows the application to focus on only a small portion of the overall stream at any given time
+- streams with the word **Buffered** in their name read or write GROUPS of bytes or characters at a time
+   - By utilizing the **BufferedOutputStream**, the Java application can write a large chunk of bytes at a time, reducing the round trips between the Java application and the file system and drastically improving performance
+- Java provides three built-in streams: System.in, System.err, System.out
+- **Byte Streams vs. Character Streams:** 
+   - the stream classes (all contain InputStream or OutputStream in their names) are used for inputting and outputting all types of binary or byte data (ex. FileInputStream)
+   - the reader and writer classes are used for inputting and outputting only character and String data (ex. FileReader)
+- **Input and Output:**  
+   - note: PrintWriter has NO accompanying PrintReader class.  PrintStream class has no corresponding InputStream class.
+- **Low-Level vs. High-Level Streams:**  
+   - low-level: stream that connects directly with the source of the data, such as a file, an array, or a String
+   - high-level: stream that is built on top of another stream using wrapping (ex. FileInputStream is a low-level stream that interacts directly with the file; this can be wrapped by the high-level BufferedInputStream to improve performance)
+
+...
+
+
 <br>
 
 ## Java File I/O (NIO.2)
