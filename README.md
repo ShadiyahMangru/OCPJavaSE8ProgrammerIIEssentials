@@ -157,6 +157,14 @@ Daylight Savings Time: One day in March that is 23 hours long.  One day in Novem
 - **BufferedInputStream and BufferedOutputStream classes:**
    - to wrap FileInputStream and FileOutputStream
    - common to use Buffered classes anytime reading/writing data with byte arrays (because of performance improvement when move from nonbuffered to buffered file access)
+- **FileReader and FileWriter classes:**
+   - read/write char values
+   - -1 returned when end of file detected
+   - write(String) to write a String object directly to the stream
+- **BufferedReader and BufferedWriter classes:** 
+   - note `writeFile(List<String> data, File destination)` example
+   - stop reading file when readLine() returns null
+   - to avoid deciphering character encodings yourself
 
 ...
 
