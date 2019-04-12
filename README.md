@@ -169,7 +169,7 @@ Daylight Savings Time: One day in March that is 23 hours long.  One day in Novem
    - serialization: converting an in-memory object to a stored data format
    - deserialization: converting stored data into an object
    - ObjectInputStream and ObjectOutputStream are two stream classes for object serialization and deserialization
-   - these classes support reading and writing null object (important to check for null values when reading from a serialized data stream)
+   - these classes support reading and writing null objects (important to check for null values when reading from a serialized data stream)
    - note: the constructor and any default initializations ignored during deserialization process
 
 ...
