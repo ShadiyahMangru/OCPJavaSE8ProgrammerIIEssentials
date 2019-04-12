@@ -148,6 +148,12 @@ Daylight Savings Time: One day in March that is 23 hours long.  One day in Novem
    - Flushing the Stream
    - Marking the Stream: some (if not supported, exception at runtime) java.io input stream classes include methods to move stream back to an earlier position
    - Skipping over Data: InputStream and Reader classes include skip(long) method to skip over a certain number of bytes
+- **Working With Streams:**
+- **FileInputStream and FileOutputStream classes:**
+   - used to read bytes from a file or write bytes to a file, respectively; include constructors that take a File object or String, representing a path to the file
+   - read() returns -1 when end of stream/file reached
+   - note for output: if destination file already exists, will be overwritten
+   - note for input: FileNotFoundException (subclass of IOException) if file not found
 
 ...
 
