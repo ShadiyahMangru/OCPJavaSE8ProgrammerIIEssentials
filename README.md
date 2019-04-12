@@ -153,3 +153,8 @@ Daylight Savings Time: One day in March that is 23 hours long.  One day in Novem
 
 ## Localization
 <br>
+<br>
+
+## Sources
+- OCP: Oracle Certified Professional Java SE 8 Programmer II Study Guide (Sybex)
+- OCA/OCP Java SE 8 Programmer Practice Tests (Sybex)
