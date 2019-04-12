@@ -139,9 +139,17 @@ Daylight Savings Time: One day in March that is 23 hours long.  One day in Novem
 - **Stream Base Classes:**
    - InputStream, OutputStream, Reader, and Writer abstract classes (cannot instantiate an instance of it) are parents of all Java stream classes.  Note: ObjectInputStream's inherited parent is InputStream; BufferedWriter's inherited parent is Writer; exception: PrintStream's inherited parent is OutputStream.
    - high-level stream CONSTRUCTORS often use a reference to the abstract parent class.  This enables high-level stream classes to be used much more often without concern for particular underlying stream subclass.
+- **Decoding Java I/O Class Names:**
+   - when wrapping a stream, can mix and match only types that inherit from same abstract parent stream
+   - low-level: FileInputStream, FileOutputStream, FileReader, FileWriter
+   - high-level: BufferedReader, BufferedWriter, ObjectInputStream, ObjectOutputStream, InputStreamReader, OutputStreamWriter, PrintStream, PrintWriter
+- **Common Stream Operations:** 
+   - Closing the Stream: (exceptions and assertions) close() in a finally block or try-with-resource syntax
+   - Flushing the Stream
+   - Marking the Stream: some (if not supported, exception at runtime) java.io input stream classes include methods to move stream back to an earlier position
+   - Skipping over Data: InputStream and Reader classes include skip(long) method to skip over a certain number of bytes
 
 ...
-
 
 <br>
 
