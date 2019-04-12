@@ -136,6 +136,9 @@ Daylight Savings Time: One day in March that is 23 hours long.  One day in Novem
 - **Low-Level vs. High-Level Streams:**  
    - low-level: stream that connects directly with the source of the data, such as a file, an array, or a String
    - high-level: stream that is built on top of another stream using wrapping (ex. FileInputStream is a low-level stream that interacts directly with the file; this can be wrapped by the high-level BufferedInputStream to improve performance)
+- **Stream Base Classes:**
+   - InputStream, OutputStream, Reader, and Writer abstract classes (cannot instantiate an instance of it) are parents of all Java stream classes.  Note: ObjectInputStream's inherited parent is InputStream; BufferedWriter's inherited parent is Writer; exception: PrintStream's inherited parent is OutputStream.
+   - high-level stream CONSTRUCTORS often use a reference to the abstract parent class.  This enables high-level stream classes to be used much more often without concern for particular underlying stream subclass.
 
 ...
 
