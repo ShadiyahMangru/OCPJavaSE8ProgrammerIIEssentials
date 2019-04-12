@@ -154,6 +154,9 @@ Daylight Savings Time: One day in March that is 23 hours long.  One day in Novem
    - read() returns -1 when end of stream/file reached
    - note for output: if destination file already exists, will be overwritten
    - note for input: FileNotFoundException (subclass of IOException) if file not found
+- **BufferedInputStream and BufferedOutputStream classes:**
+   - to wrap FileInputStream and FileOutputStream
+   - common to use Buffered classes anytime reading/writing data with byte arrays (because of performance improvement when move from nonbuffered to buffered file access)
 
 ...
 
