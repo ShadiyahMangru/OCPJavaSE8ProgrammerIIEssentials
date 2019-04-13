@@ -171,9 +171,33 @@ Daylight Savings Time: One day in March that is 23 hours long.  One day in Novem
    - ObjectInputStream and ObjectOutputStream are two stream classes for object serialization and deserialization
    - these classes support reading and writing null objects (important to check for null values when reading from a serialized data stream)
    - note: the constructor and any default initializations ignored during deserialization process
-
-...
-
+- **PrintStream and PrintWriter classes:**
+   - PrintStream class operates on OutputStream instances and writes data as bytes.  System.out and System.err are PrintStream objects.
+   - PrintWriter class operates on Writer instances and writes data as characters.  Has methods that convert everything to String values.
+   - write() throws a checked IOException that must be caught in your application
+   - print() same line
+   - println() new line
+   - format() line break after text NOT automatically inserted
+   - format() and printf() take an optional vararg and formats the output
+- **FilterInputStream and FilterOutputStream:**
+   - Filter classes are the superclass of all classes that filter or transfer data
+   <br>
+- **Interacting with Users:**
+   - java.io.Console recommended for interacting with and displaying info to user
+   - Console class is a singleton (only 1 version of the object available in JVM)
+   - useful for exception handling: System.console() will return null in environments where text interactions are not supported
+   - Console class has far more options than System.in and System.out resources
+   - reader() and writer() -- handle underlying character encoding automatically (to work with char and String data)
+   - format() and printf() -- each take a String format and list of arguments
+   - flush() -- forces any buffered output to be written immediately
+   - readLine() -- retrieves single line of text from user (user presses Enter key to terminate it)
+   - readLine(String format, Object... args) -- displays formatted prompt to user before accepting text
+   - readPassword() -- echoing disabled (user does not see text s/he typing); returns an array of characters instead of a String (for security reasons); another precaution: immediately clear the character arrays that store the password as soon as they are no longer needed in the application
+   <br>
+- **Summary:**
+   - java.io streams: byte vs. character (Reader/Writer for character)
+   - common practice to start with a low-level resource or file stream and wrap it in a buffered stream to improve performance
+   - Console class -- support for passwords and built-in support for String formatting
 <br>
 
 ## Java File I/O (NIO.2)
