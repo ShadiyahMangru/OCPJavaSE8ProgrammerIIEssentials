@@ -55,7 +55,16 @@
    - Naming Conventions: E -- element, K -- map key, V -- map value, N -- number, T -- generic data type, S,U,V -- and so forth for multiple generic types
    - generic classes aren't limited to having a single type parameter (e.g., ```<T, U>```)
    - TYPE ERASURE allows your code to be compatible with older versions of Java that do not contain generics.
-   
+- Generic Interfaces (3 ways a class can approach implementing a Generic Interface):
+```
+public interface ____________<T> {
+       void aMethod(T t)
+}
+```
+   1. specify the generic type in class 
+   2. create a generic class
+   3. not use generics at all (generates a compiler WARNING about *raw type* but it does compile)
+
 ...
 <br>
 
