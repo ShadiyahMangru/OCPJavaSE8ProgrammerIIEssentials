@@ -53,7 +53,7 @@
 - Generic classes:
    - Generic classes become useful when the classes used as the type parameter can have absolutely nothing to do with each other (e.g., ```public class Roster<T>{}``` T might be a HockeyPlayer object, a SoccerPlayer object, a SynchronizedSwimmer object, a BaseballPlayer object, etc.
    - Naming Conventions: E -- element, K -- map key, V -- map value, N -- number, T -- generic data type, S,U,V -- and so forth for multiple generic types
-   - generic classes aren't limited to having a single type parameter (e.g., ```<T, U>```
+   - generic classes aren't limited to having a single type parameter (e.g., ```<T, U>```)
    - TYPE ERASURE allows your code to be compatible with older versions of Java that do not contain generics.
    
 ...
