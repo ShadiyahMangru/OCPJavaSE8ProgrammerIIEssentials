@@ -30,6 +30,27 @@
 <br>
 
 ## Generics and Collections
+- Arrays:
+   - built-in data structure that contains other objects or primitives
+   - length variable to check number of elements
+   - asList() converts array to a List that is not resizable but honors all other methods in List interface
+- ArrayLists:
+   - cannot contain primitives
+   - get()
+   - size()
+- Wrapper Classes:
+   - each primitive has a corresponding wrapper class for when an object required
+- Autoboxing:
+   - automatically converts a primitive to the corresponding wrapper class (e.g. int to Integer).
+   - unboxing automatically converts a wrapper class back to a primitive
+- Diamond Operator:
+   - specifies allowed object types (e.g., ```ArrayList<Integer> iArrayL = new ArrayList<>();``` adding 4.36 to iArrayL is invalid)
+   - empty diamond operator to avoid redundant/verbose code
+- Searching:
+   - binary search assumes input sorted (if no match found, returns ONE LESS THAN negated index of where the requested value would need to be inserted)
+- Sorting:
+
+...
 <br>
 
 ## Lambda Built-in Functional Interfaces
